@@ -1,0 +1,73 @@
+.slide-card {
+  border: 1px solid var(--wp--preset--color--gray-300);
+  border-radius: 12px;
+  overflow: hidden;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+
+  &::marker {
+    display: none;
+  }
+
+  &__image {
+    position: relative;
+    aspect-ratio: 427/236;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      aspect-ratio: inherit;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+    }
+
+    &::before {
+      background: rgba(236, 97, 42, 0.19);
+    }
+
+    &::after {
+      background: rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+
+    @media (max-width: 767px) {
+      padding: 16px;
+      gap: 16px;
+    }
+  }
+
+  &__title {
+    font-size: var(--wp--preset--font-size--3-xl);
+    font-weight: 500;
+
+    @media (max-width: 767px) {
+      font-size: var(--wp--preset--font-size--2-xl);
+    }
+  }
+
+  &__text {
+    font-size: var(--wp--preset--font-size--lg);
+    color: var(--wp--preset--color--black-400);
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: auto;
+  }
+}

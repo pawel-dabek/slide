@@ -1,0 +1,33 @@
+@import 'style';
+
+.button-content-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  & > * {
+    margin-bottom: 0 !important;
+  }
+}
+
+button.image-selector-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  padding: 0;
+  z-index: 20;
+
+  &::after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='20' viewBox='0 0 24 24' width='20'%3E%3Cpath d='m0 0h24v24h-24z' fill='%23fff'/%3E%3Cg stroke='%23000' stroke-linejoin='round'%3E%3Cpath d='m21 16v4c0 .5523-.4477 1-1 1h-16c-.55228 0-1-.4477-1-1v-2m18-2v-12c0-.55228-.4477-1-1-1h-16c-.55228 0-1 .44772-1 1v14m18-2-5.5171-3.6781c-.2986-.1991-.681-.2229-1.002-.0624l-11.4809 5.7405'/%3E%3Ccircle cx='8' cy='9' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    width: 20px;
+    height: 20px;
+  }
+}
